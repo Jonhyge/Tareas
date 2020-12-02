@@ -1,0 +1,79 @@
+<html>
+    <style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    body{  
+        font-family: Calibri, Helvetica, sans-serif;  
+        width: 100%;
+        margin: 0 auto;
+        background-image: url(https://eskipaper.com/images/minimalist-wallpaper-34.jpg); 
+    }
+    div {  
+        display:inline-block;
+        justify-content:center;
+        width: 500px;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid gray;
+        padding: 10px;
+        margin: 5px 30%;  
+    } 
+    input[type=text], input[type=password], input[type=email], textarea {  
+        width: 30%;  
+        padding: 10px;  
+        margin: 5px 0 15px 0;  
+        display: inline-block;  
+        border: none;  
+        background: #c7c7c7;  
+    }  
+    input[type=text]:focus, input[type=password],  input[type=email],:focus {
+        background-color: rgb(240, 240, 240);
+        outline-style:solid;
+        outline-width: 1px;
+        outline-color: black;
+        }
+    p.small {
+        line-height: 0.2;
+    }
+    .registerbtn {  
+    background-color: #4CAF50;  
+    color: white;  
+    padding: 16px 20px;  
+    margin: 8px 0;  
+    border: none;  
+    cursor: pointer;  
+    width: 100%;  
+    opacity: 0.9;  
+    }  
+    .registerbtn:hover {  
+    opacity: 1;  
+    }  
+    </style>
+    <body>
+        
+    <div>
+        <h1>Registrate</h1>
+        <p class="small">Completa tus datos para crear tu cuenta.</p>
+    </div>
+    <form>
+    <div>
+       <p class="small" for="nombre">Nombre</p>
+       <input type="text" id="Nombre" name="nombre" size="10"  [(ngModel)]="Nombre" required>
+        <p class="small">Apellido Paterno</p>
+        <input type="text" id="Apelp" name="apelp" size="10"  [(ngModel)]="ApellidoP" required>
+        <p class="small">Apellido Materno</p>
+        <input type="text" id= "Apelm" name="apelm" size="10" [(ngModel)]="ApellidoM" required>
+        <p class="small">Email</p>
+        <input type="email" id="Email" name="email" size="10"  [(ngModel)]="Email" required>
+        <p class="small">Contraseña</p>
+        <input type="password" id="Contrasena" name="contrasena" size="10" [(ngModel)]="Contrasena" required >
+        <p class="small">Confirmar contraseña</p>
+        <input type="password" name="confcontraseña" size="10" required>
+        <button (click)="producircookie()"  class="registerbtn">Registrar</button> 
+        <button (click)="obtenercookies()"  class="registerbtn">Mostrar</button> 
+     </div>
+    </form>
+    <p>Copyright 2020 Todos los derechos reservados</p>
+    </body>
+</html>  
